@@ -316,14 +316,7 @@ app.post("/delete_usuario", function (req, res) {
 
 // Fim delete Usuário
 
-// app.listen(port, () => {
-// });
+app.listen(port, () => {
+});
 
 
-app.listen({
-  host: '0.0.0.0',
-  port: process.env.PORT ? Number(process.env.PORT) : 3000,
-}).then(() => {
-  console.log(`EasyEats Rodandoo`);
-
-})
