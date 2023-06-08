@@ -1,14 +1,14 @@
-FROM node:18-alpine
+FROM node:20-alpine
 
 LABEL version="1.0"
 
-WORKDIR /usr/app
+WORKDIR /app
 
 COPY package*.json ./
 
 RUN npm install
 
-COPY src /usr/app/
+COPY . .
 
 EXPOSE 3000
 

@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "script": "node app"
+    "start": "node app.js"
   },
-  "author": "Pedro Rodante",
+  "author": "Grupo Easy Eats",
   "license": "CC-BY-4.0",
   "description": "",
   "dependencies": {

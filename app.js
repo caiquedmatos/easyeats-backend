@@ -234,9 +234,9 @@ app.post("/deleteItem", function (req, res) {
       console.log("Deu errinho na att");
       res.send(err);
     }
-    else{
-    console.log(`O post a seguir foi deletado: "${rows}"`);
-    res.send(rows);
+    else {
+      console.log(`O post a seguir foi deletado: "${rows}"`);
+      res.send(rows);
     }
   });
 });
@@ -254,9 +254,9 @@ app.post("/deleteItemCozinha", function (req, res) {
       console.log("Deu errinho na att");
       res.send(err);
     }
-    else{
-    console.log(`O post a seguir foi deletado: "${rows}"`);
-    res.send(rows);
+    else {
+      console.log(`O post a seguir foi deletado: "${rows}"`);
+      res.send(rows);
     }
   });
 });
@@ -284,7 +284,7 @@ app.post("/alterar_dados_usuario", function (req, res) {
     } else {
       console.log("Usuário atualizado!");
       sql = `SELECT * FROM Usuarios WHERE ID="${usuarioId}"`;
-      console.log("Puxando os dados com o id: "+ usuarioId);
+      console.log("Puxando os dados com o id: " + usuarioId);
       db.all(sql, [], (err, rows) => {
         console.log(rows);
         res.send(rows);
@@ -316,8 +316,14 @@ app.post("/delete_usuario", function (req, res) {
 
 // Fim delete Usuário
 
-app.listen(port, () => {
-  console.log(`EasyEats na portinha: ${port}`);
-});
+// app.listen(port, () => {
+// });
 
 
+app.listen({
+  host: '0.0.0.0',
+  port: process.env.PORT ? Number(process.env.PORT) : 3000,
+}).then(() => {
+  console.log(`EasyEats Rodandoo`);
+
+})
