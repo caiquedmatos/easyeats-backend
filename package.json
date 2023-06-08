@@ -1,0 +1,16 @@
+{
+  "name": "servidor-node",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "script": "node app"
+  },
+  "author": "Pedro Rodante",
+  "license": "CC-BY-4.0",
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "sqlite3": "^5.1.6"
+  }
+}
